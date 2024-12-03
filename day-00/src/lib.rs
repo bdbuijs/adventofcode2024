@@ -1,5 +1,3 @@
-use std::fs;
-
 use nom::{
     branch::alt,
     bytes::complete::tag,
@@ -33,6 +31,7 @@ fn parse_line(input: &str) -> IResult<&str, Line> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::fs;
 
     #[test]
     fn part1() {
