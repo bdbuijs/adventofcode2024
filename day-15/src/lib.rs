@@ -392,7 +392,7 @@ fn parse_moves(input: &str) -> IResult<&str, Vec<RobotMove>> {
             '^' | 'v' | '<' | '>' => {
                 moves.push(c.into());
             }
-            x => {
+            _ => {
                 return Err(nom::Err::Error(make_error(
                     input,
                     nom::error::ErrorKind::Fail,
